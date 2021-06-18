@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navy">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_poster_detail"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                tools:src="@drawable/avenger_endgame"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/tv_title_detail"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_poster_detail"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                tools:text="Money Heist"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
+
+            <ImageButton
+                android:id="@+id/btn_favorite_movie"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="32dp"
+                android:layout_below="@id/img_poster_detail"
+                android:background="@drawable/ic_favorite_selector"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:contentDescription="@string/movie" />
+
+            <ImageButton
+                android:id="@+id/btn_favorite_show"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="32dp"
+                android:layout_below="@id/img_poster_detail"
+                android:background="@drawable/ic_favorite_selector"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:contentDescription="@string/movie" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title_detail"
+                android:drawableStart="@drawable/ic_date_white_24"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_date"
+                android:drawableStart="@drawable/ic_star_rate_yellow_24"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/label_synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_rate"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/synopsis"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_synopsis_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_synopsis"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
+                tools:text="sinopsis film"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
